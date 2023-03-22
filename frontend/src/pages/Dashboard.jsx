@@ -18,7 +18,6 @@ function Dashboard() {
   useEffect(() => {
     if (isError) {
       toast.error(message);
-      
     }
 
     dispatch(getCustomers());

@@ -10,7 +10,7 @@ function CustomerItem({ customer }) {
     <div className="customer">
       <div>{new Date(customer.createdAt).toLocaleString('en-US')}</div>
       Name: <h4>{customer.name}</h4>
-      Description: <h4>{customer.description}</h4>
+      Address: <h4>{customer.address}</h4>
      {customer.phone && <div>Phone: <h4>{customer.phone}</h4>
       countryCode: <h4>{customer.countryCode}</h4>
       countryName: <h4>{customer.countryName}</h4>

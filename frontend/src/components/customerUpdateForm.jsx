@@ -5,7 +5,7 @@ import { updateCustomer } from '../features/customers/customersSlice';
 
 function CustomerUpdateForm({ customer }) {
   const [name, setName] = useState(customer.name);
-  const [description, setDescription] = useState(customer.description);
+  const [address, setAddress] = useState(customer.address);
   const [phone, setPhone] = useState(customer.phone);
   const id = customer._id;
   const dispatch = useDispatch();
@@ -15,12 +15,13 @@ function CustomerUpdateForm({ customer }) {
   );
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateCustomer({ id, name, description, phone }));
+    dispatch(updateCustomer({ id, name, address, phone }));
     if (isSuccess) {
       navigate('/');
     }
+   
     setName('');
-    setDescription('');
+    setAddress('');
     setPhone('');
   };
 
@@ -36,13 +37,13 @@ function CustomerUpdateForm({ customer }) {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <label htmlFor="text">Description*</label>
+          <label htmlFor="text">Address*</label>
           <input
             type="text"
             name="text"
             id="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
           />
           <label htmlFor="text">Phone</label>
           <input

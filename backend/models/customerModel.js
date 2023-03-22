@@ -6,9 +6,9 @@ const customerSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please add a name value'],
     },
-    description: {
+    address: {
       type: String,
-      required: [true, 'Please add a description value'],
+      required: [true, 'Please add an address value'],
     },
     phone: {
       type: String,

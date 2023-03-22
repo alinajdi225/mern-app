@@ -11,23 +11,6 @@ body {
   height: 100vh;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-p {
-  line-height: 1.7;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  line-height: 2.2;
-}
-
 h1,
 h2,
 h3 {
@@ -44,35 +27,9 @@ h3 {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
-}
-
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
-.header ul li a svg {
-  margin-right: 5px;
 }
 
 .heading {
@@ -160,22 +117,9 @@ h3 {
   justify-content: center;
 }
 
-.btn svg {
-  margin-right: 8px;
-}
-
-.btn-reverse {
-  background: #fff;
-  color: #000;
-}
-
 .btn-block {
   width: 100%;
   margin-bottom: 20px;
-}
-
-.btn:hover {
-  transform: scale(0.98);
 }
 
 .loadingSpinnerContainer {
@@ -189,7 +133,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .loadingSpinner {
@@ -207,19 +150,5 @@ h3 {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 600px) {
-  .form {
-    width: 90%;
-  }
-
-  .heading h1 {
-    font-size: 2rem;
-  }
-
-  .heading p {
-    font-size: 1.5rem;
   }
 }

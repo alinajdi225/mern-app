@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "Goalsetter app for youtube tutorial",
+  "description": "mern app for areeba code-challenge",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
