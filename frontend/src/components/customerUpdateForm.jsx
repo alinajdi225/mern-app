@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { updateCustomer } from '../features/customers/customersSlice';
 
 function CustomerUpdateForm({ customer }) {
@@ -15,11 +16,17 @@ function CustomerUpdateForm({ customer }) {
   );
   const onSubmit = (e) => {
     e.preventDefault();
+    if (!name || !address) {
+      toast.error('Please add the required fileds');
+
+      return;
+    }
+
     dispatch(updateCustomer({ id, name, address, phone }));
     if (isSuccess) {
       navigate('/');
     }
-   
+
     setName('');
     setAddress('');
     setPhone('');

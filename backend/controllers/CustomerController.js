@@ -72,7 +72,7 @@ const updateCustomer = asyncHandler(async (req, res) => {
   }
   let result = null;
 
-  if (phone !== null) {
+  if (phone) {
     result = await numVerify.ValidateNumber(phone);
 
     if (result.valid == false) {
@@ -95,7 +95,6 @@ const updateCustomer = asyncHandler(async (req, res) => {
   );
   res.status(200).json(updatedCustomer);
 });
-
 // @desc    Delete customer
 // @route   DELETE /api/customers/:id
 const deletCustomer = asyncHandler(async (req, res) => {
